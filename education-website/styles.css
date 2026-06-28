@@ -450,4 +450,9 @@ h3 {
   .contact-form button {
     width: 100%;
   }
+  .logo-img{
+    width:60px;
+    height:60px;
+    object-fit:contain;
+  }
 }
