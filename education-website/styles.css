@@ -58,7 +58,11 @@ img {
   font-size: 18px;
   font-weight: 900;
 }
-
+.logo-img{
+    width:180px;
+    height:auto;
+    object-fit:contain;
+  }
 .brand-mark {
   display: grid;
   place-items: center;
@@ -449,10 +453,5 @@ h3 {
   .button,
   .contact-form button {
     width: 100%;
-  }
-  .logo-img{
-    width:60px;
-    height:60px;
-    object-fit:contain;
   }
 }
