@@ -63,6 +63,11 @@ img {
     height:60px;
     object-fit:contain;
   }
+.name-img{
+    width:100px;
+    height:60px;
+    object-fit:contain;
+  }
 .brand-mark {
   display: grid;
   place-items: center;
