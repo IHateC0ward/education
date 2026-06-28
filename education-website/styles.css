@@ -1,0 +1,453 @@
+:root {
+  --ink: #152238;
+  --muted: #667085;
+  --line: #d9e4e8;
+  --paper: #ffffff;
+  --soft: #f4faf9;
+  --deep: #102a43;
+  --teal: #177e78;
+  --teal-dark: #0e5c57;
+  --coral: #e76f51;
+  --gold: #f2b84b;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  color: var(--ink);
+  background: var(--paper);
+  font-family: "Microsoft YaHei", "PingFang SC", "Noto Sans SC", Arial, sans-serif;
+  line-height: 1.6;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  padding: 16px clamp(20px, 5vw, 72px);
+  border-bottom: 1px solid rgba(217, 228, 232, 0.88);
+  background: rgba(255, 255, 255, 0.94);
+  backdrop-filter: blur(12px);
+}
+
+.brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 18px;
+  font-weight: 900;
+}
+
+.brand-mark {
+  display: grid;
+  place-items: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 8px;
+  color: #fff;
+  background: var(--teal);
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  gap: clamp(16px, 3vw, 34px);
+  color: var(--muted);
+  font-size: 15px;
+  font-weight: 700;
+}
+
+.nav a:hover {
+  color: var(--teal-dark);
+}
+
+.menu-toggle {
+  display: none;
+  width: 42px;
+  height: 42px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: #fff;
+}
+
+.menu-toggle span {
+  display: block;
+  width: 19px;
+  height: 2px;
+  margin: 5px auto;
+  background: var(--ink);
+}
+
+.hero {
+  display: grid;
+  grid-template-columns: minmax(0, 0.92fr) minmax(320px, 1.08fr);
+  gap: clamp(30px, 5vw, 68px);
+  align-items: center;
+  min-height: calc(100vh - 69px);
+  padding: clamp(42px, 7vw, 90px) clamp(20px, 5vw, 72px) 48px;
+  background:
+    linear-gradient(120deg, rgba(23, 126, 120, 0.09), rgba(231, 111, 81, 0.08)),
+    var(--soft);
+}
+
+.eyebrow {
+  margin: 0 0 12px;
+  color: var(--coral);
+  font-size: 14px;
+  font-weight: 900;
+}
+
+h1,
+h2,
+h3,
+p {
+  margin-top: 0;
+}
+
+h1 {
+  max-width: 680px;
+  margin-bottom: 22px;
+  font-size: clamp(42px, 7vw, 76px);
+  line-height: 1.05;
+}
+
+h2 {
+  margin-bottom: 12px;
+  font-size: clamp(30px, 4.5vw, 48px);
+  line-height: 1.15;
+}
+
+h3 {
+  margin-bottom: 10px;
+  font-size: 21px;
+  line-height: 1.3;
+}
+
+.hero-text {
+  max-width: 620px;
+  margin-bottom: 30px;
+  color: var(--muted);
+  font-size: 18px;
+}
+
+.hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+}
+
+.button,
+.contact-form button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 48px;
+  border: 0;
+  border-radius: 8px;
+  padding: 0 22px;
+  font: inherit;
+  font-weight: 900;
+  cursor: pointer;
+}
+
+.primary,
+.contact-form button {
+  color: #fff;
+  background: var(--teal);
+  box-shadow: 0 14px 28px rgba(23, 126, 120, 0.22);
+}
+
+.ghost {
+  color: var(--teal-dark);
+  background: #fff;
+  border: 1px solid var(--line);
+}
+
+.hero-image img {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  border-radius: 8px;
+  box-shadow: 0 26px 60px rgba(21, 34, 56, 0.18);
+}
+
+.metrics {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+  padding: 28px clamp(20px, 5vw, 72px);
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+}
+
+.metrics strong {
+  display: block;
+  color: var(--teal-dark);
+  font-size: clamp(30px, 5vw, 46px);
+  line-height: 1;
+}
+
+.metrics span {
+  color: var(--muted);
+}
+
+.section,
+.about,
+.contact {
+  padding: clamp(58px, 8vw, 104px) clamp(20px, 5vw, 72px);
+}
+
+.section-head {
+  max-width: 780px;
+  margin-bottom: 32px;
+}
+
+.section-head p,
+.course-card p,
+.teacher-card p,
+.about p,
+.contact p,
+.contact-info {
+  color: var(--muted);
+}
+
+.alt {
+  background: var(--soft);
+}
+
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.course-card,
+.teacher-card {
+  overflow: hidden;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: #fff;
+}
+
+.course-card img {
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  object-fit: cover;
+}
+
+.course-card div,
+.teacher-card {
+  padding: 24px;
+}
+
+.teacher-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.teacher-card img {
+  width: 92px;
+  height: 92px;
+  margin-bottom: 18px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.about {
+  display: grid;
+  grid-template-columns: minmax(0, 0.95fr) minmax(320px, 1.05fr);
+  gap: clamp(28px, 5vw, 64px);
+  align-items: center;
+}
+
+.about img {
+  width: 100%;
+  aspect-ratio: 5 / 4;
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+.check-list {
+  display: grid;
+  gap: 12px;
+  margin: 24px 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.check-list li {
+  position: relative;
+  padding-left: 30px;
+  font-weight: 800;
+}
+
+.check-list li::before {
+  position: absolute;
+  left: 0;
+  color: var(--teal);
+  content: "✓";
+}
+
+.contact {
+  display: grid;
+  grid-template-columns: minmax(0, 0.95fr) minmax(320px, 0.78fr);
+  gap: clamp(26px, 5vw, 58px);
+  background: var(--deep);
+  color: #fff;
+}
+
+.contact .eyebrow {
+  color: #f7c66b;
+}
+
+.contact p,
+.contact-info {
+  color: #d8e6ec;
+}
+
+.contact-info {
+  display: grid;
+  gap: 8px;
+  margin-top: 24px;
+}
+
+.contact-form {
+  display: grid;
+  gap: 14px;
+  padding: 24px;
+  border-radius: 8px;
+  color: var(--ink);
+  background: #fff;
+  box-shadow: 0 18px 45px rgba(0, 0, 0, 0.2);
+}
+
+.contact-form label {
+  display: grid;
+  gap: 7px;
+  color: var(--muted);
+  font-size: 14px;
+  font-weight: 800;
+}
+
+.contact-form input,
+.contact-form select,
+.contact-form textarea {
+  width: 100%;
+  min-height: 46px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  padding: 10px 12px;
+  color: var(--ink);
+  background: #fff;
+  font: inherit;
+}
+
+.contact-form textarea {
+  resize: vertical;
+}
+
+.form-note {
+  min-height: 22px;
+  margin: 0;
+  color: var(--teal-dark);
+  font-weight: 800;
+}
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 24px clamp(20px, 5vw, 72px);
+  color: var(--muted);
+  border-top: 1px solid var(--line);
+}
+
+@media (max-width: 900px) {
+  .menu-toggle {
+    display: block;
+  }
+
+  .nav {
+    position: absolute;
+    top: 69px;
+    right: 20px;
+    left: 20px;
+    display: none;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0;
+    padding: 12px;
+    border: 1px solid var(--line);
+    border-radius: 8px;
+    background: #fff;
+    box-shadow: 0 18px 40px rgba(21, 34, 56, 0.14);
+  }
+
+  .nav.is-open {
+    display: flex;
+  }
+
+  .nav a {
+    padding: 12px;
+  }
+
+  .hero,
+  .about,
+  .contact {
+    grid-template-columns: 1fr;
+  }
+
+  .hero {
+    min-height: auto;
+  }
+
+  .card-grid,
+  .teacher-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 560px) {
+  .site-header {
+    padding-inline: 16px;
+  }
+
+  h1 {
+    font-size: 39px;
+  }
+
+  .metrics {
+    grid-template-columns: 1fr;
+  }
+
+  .footer {
+    flex-direction: column;
+  }
+
+  .button,
+  .contact-form button {
+    width: 100%;
+  }
+}
