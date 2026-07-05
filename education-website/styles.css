@@ -59,8 +59,8 @@ img {
   font-weight: 900;
 }
 .logo-img{
-    width:40px;
-    height:40px;
+    width:60px;
+    height:60px;
     object-fit:contain;
   }
 .name-img{
@@ -251,6 +251,12 @@ h3 {
   gap: 18px;
 }
 
+.deck-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 18px;
+}
+
 .course-card,
 .teacher-card {
   overflow: hidden;
@@ -400,7 +406,7 @@ h3 {
 
   .nav {
     position: absolute;
-    top: 69px;
+    top: 93px;
     right: 20px;
     left: 20px;
     display: none;
@@ -433,6 +439,7 @@ h3 {
   }
 
   .card-grid,
+  .deck-grid,
   .teacher-grid {
     grid-template-columns: 1fr;
   }
