@@ -59,8 +59,8 @@ img {
   font-weight: 900;
 }
 .logo-img{
-    width:60px;
-    height:60px;
+    width:68px;
+    height:68px;
     object-fit:contain;
   }
 .name-img{
@@ -251,6 +251,10 @@ h3 {
   gap: 18px;
 }
 
+.course-guide-grid {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
 .deck-grid {
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));
@@ -274,6 +278,62 @@ h3 {
 .course-card div,
 .teacher-card {
   padding: 24px;
+}
+
+.lecture-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1.08fr) minmax(320px, 0.92fr);
+  gap: 18px;
+  align-items: stretch;
+}
+
+.lecture-main,
+.lecture-item {
+  overflow: hidden;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: #fff;
+}
+
+.lecture-main img {
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  object-fit: cover;
+}
+
+.lecture-main div {
+  padding: 24px;
+}
+
+.lecture-main p,
+.lecture-item p {
+  color: var(--muted);
+}
+
+.lecture-list {
+  display: grid;
+  gap: 18px;
+}
+
+.lecture-item {
+  display: grid;
+  grid-template-columns: 140px minmax(0, 1fr);
+  min-height: 132px;
+}
+
+.lecture-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.lecture-item div {
+  padding: 18px;
+}
+
+.lecture-item h3 {
+  margin-bottom: 6px;
+  font-size: 18px;
 }
 
 .teacher-grid {
@@ -406,7 +466,7 @@ h3 {
 
   .nav {
     position: absolute;
-    top: 93px;
+    top: 101px;
     right: 20px;
     left: 20px;
     display: none;
@@ -440,8 +500,15 @@ h3 {
 
   .card-grid,
   .deck-grid,
-  .teacher-grid {
+  .teacher-grid,
+  .lecture-layout,
+  .lecture-item {
     grid-template-columns: 1fr;
+  }
+
+  .lecture-item img {
+    aspect-ratio: 16 / 9;
+    height: auto;
   }
 }
 
