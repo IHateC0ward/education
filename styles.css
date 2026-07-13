@@ -218,10 +218,6 @@ h3 {
   box-shadow: 0 24px 52px rgba(34, 48, 68, 0.16);
 }
 
-.hero-photo {
-  aspect-ratio: 4 / 3;
-}
-
 .intro-strip {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
